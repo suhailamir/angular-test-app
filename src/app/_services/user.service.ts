@@ -12,9 +12,6 @@ export class UserService {
         return this.http.get<User[]>('http://neat-mvp-api.herokuapp.com/v1/users');
     }
 
-    getById(id: number) {
-        return this.http.get('/api/users/' + id);
-    }
 
     create(user: User) {
         const formData: FormData = new FormData();
@@ -26,13 +23,5 @@ export class UserService {
 
 
         return this.http.post('http://neat-mvp-api.herokuapp.com/v1/users', formData);
-    }
-
-    update(user: User) {
-        return this.http.put('/api/users/' + user.id, user);
-    }
-
-    delete(id: number) {
-        return this.http.delete('/api/users/' + id);
     }
 }
