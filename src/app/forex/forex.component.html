@@ -1,0 +1,35 @@
+<div class="toggle-btn">
+  <button (click)=toggle(); class="btn btn-primary add-user">
+    Toggle
+  </button>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Currency</th>
+      <th scope="col">Rate</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="rates.rates">
+    <tr>
+      <td>SGD</td>
+      <td>1 SGD equals {{rates.rates.SGD}} {{base}}</td>
+    </tr>
+    <tr>
+      <td>USD</td>
+      <td>1 USD equals {{rates.rates.USD}} {{base}}</td>
+    </tr>
+    <tr>
+      <td>JPY</td>
+      <td>1 JPY equals {{rates.rates.JPY}} {{base}}</td>
+    </tr>
+    <tr>
+      <td>CNY</td>
+      <td>1 CNY equals {{rates.rates.CNY}} {{base}}</td>
+    </tr>
+    <tr>
+      <td>HKD</td>
+      <td>1 HKD equals {{rates.rates.HKD}} {{base}}</td>
+    </tr>
+  </tbody>
+</table>

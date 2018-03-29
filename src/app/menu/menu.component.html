@@ -1,0 +1,17 @@
+<div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+  <button class="btn btn-outline-primary" id="dropdownManual" ngbDropdownToggle>User</button>
+  <div ngbDropdownMenu aria-labelledby="dropdownManual">
+    <a routerLink="/users" routerLinkActive="active">Users</a>
+    <br>
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+
+    <br>
+    <a routerLink="/forex" routerLinkActive="active">Forex</a>
+
+    <br>
+    <a [routerLink]="['/login']">Logout</a>
+
+  </div>
+
+
+</div>

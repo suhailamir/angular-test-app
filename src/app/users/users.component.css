@@ -1,0 +1,31 @@
+.accordion-caret .accordion-toggle:hover {
+    text-decoration: none;
+}
+.accordion-caret .accordion-toggle:hover span,
+.accordion-caret .accordion-toggle:hover strong {
+    text-decoration: underline;
+}
+.accordion-caret .accordion-toggle:before {
+    font-size: 25px;
+    vertical-align: -3px;
+}
+/* .accordion-heading .accordion-toggle:not(.collapsed):before {
+    content: "▾";
+    margin-right: 0px;
+}
+.accordion-heading .accordion-toggle.collapsed:before {
+    content: "▸";
+    margin-right: 0px;
+} */
+.card-header {
+    content: "▾" !important;
+    margin-right: 0px;
+}
+.card-header.active {
+    content: "▸" !important;;
+    margin-right: 0px;
+}
+.add-user{
+    margin: 10px 10px;
+}
+

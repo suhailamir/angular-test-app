@@ -1,0 +1,48 @@
+<button class="btn btn-dark add-user">
+  <a [routerLink]="['/add-user']">Add User</a>
+</button>
+<br>
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+
+  <ngb-panel *ngFor="let user of users.data" class="accordion-caret">
+    <ng-template ngbPanelTitle>
+      <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" href="#collapseOne">
+          <strong>{{user.account.name}}</strong>
+        </a>
+      </div>
+    </ng-template>
+
+    <ng-template ngbPanelContent>
+      <div class="row">
+        <div class="col-md-6 ">
+          <b>Acc.</b>
+          <br>
+
+          <p>
+            {{user.account.card_number}} </p>
+        </div>
+        <div class="col-md-6 col-md-offset-6">
+          <p>$ {{user.account.balance}}</p>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-panel>
+
+</ngb-accordion>
+
+
+
+<!-- 
+<div class="accordion-group accordion-caret">
+  <div class="accordion-heading">
+    <a class="accordion-toggle" data-toggle="collapse" href="#collapseOne">
+      <strong>Header</strong>
+    </a>
+  </div>
+  <div id="collapseOne" class="accordion-body collapse in">
+    <div class="accordion-inner">
+      Content
+    </div>
+  </div>
+</div> -->
